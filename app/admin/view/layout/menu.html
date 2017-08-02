@@ -1,0 +1,70 @@
+<div class="tpl-left-nav tpl-left-nav-hover">
+    <div class="tpl-left-nav-title">
+        {$MODULE_NAME}/{$CONTROLLER_NAME}/{$ACTION_NAME}
+    </div>
+
+    <div class="tpl-left-nav-list">
+        <ul class="tpl-left-nav-menu">
+
+            <li class="tpl-left-nav-item">
+                <a href="/index.php/admin/index/index" class="nav-link {if condition="
+                   ($CONTROLLER_NAME=='index')"}active{/if}">
+                    <i class="am-icon-home"></i>
+                    <span>首页</span>
+                </a>
+            </li>
+
+            <li class="tpl-left-nav-item">
+                <a href="javascript:;" class="nav-link tpl-left-nav-link-list
+                {if condition=" ($CONTROLLER_NAME=='radio' OR $CONTROLLER_NAME=='checkbox')"}active{/if}">
+                    <i class="am-icon-table"></i>
+                    <span>题库</span>
+                    <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right
+                    {if condition=" ($CONTROLLER_NAME=='radio' OR $CONTROLLER_NAME=='checkbox')"}tpl-left-nav-more-ico-rotate{/if}"></i>
+                </a>
+                <ul class="tpl-left-nav-sub-menu" {if condition=" ($CONTROLLER_NAME=='radio' OR $CONTROLLER_NAME=='checkbox')"}style="display: block;"{/if}>
+                    <li>
+                        <a href="#">
+                            <i class="am-icon-angle-right"></i>
+                            <span>题目类别</span>
+                        </a>
+
+                        <a href="/index.php/admin/radio/index" {if condition=" ($CONTROLLER_NAME=='radio')"}class="active"{/if}>
+                            <i class="am-icon-angle-right"></i>
+                            <span>单选题</span>
+                        </a>
+
+                        <a href="/index.php/admin/checkbox/index" {if condition=" ($CONTROLLER_NAME=='checkbox')"}class="active"{/if}>
+                            <i class="am-icon-angle-right"></i>
+                            <span>多选题</span>
+                        </a>
+
+                        <a href="#">
+                            <i class="am-icon-angle-right"></i>
+                            <span>判断题</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="tpl-left-nav-item">
+                <a href="/index.php/admin/questionnaire/index" class="nav-link {if condition="
+                   ($CONTROLLER_NAME=='questionnaire')"}active{/if}">
+                    <i class="am-icon-wpforms"></i>
+                    <span>问卷</span>
+                </a>
+            </li>
+
+            <li class="tpl-left-nav-item">
+                <a href="/index.php/admin/chart/index" class="nav-link {if condition="
+                   ($CONTROLLER_NAME=='chart')"}active{/if}">
+                    <i class="am-icon-bar-chart"></i>
+                    <span>数据表</span>
+                    <!--<i class="tpl-left-nav-content tpl-badge-danger">
+                        12
+                    </i>-->
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

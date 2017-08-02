@@ -1,0 +1,24 @@
+index/index/indexmeiyibu
+<p>开始循环了</p>
+<p>__num123__</p>
+<p>__URL__</p>
+<p>__STATIC__</p>
+<p>__JS__</p> <!--/tp/public/static/js-->
+<p>__CSS__</p><!--/front/css-->
+<p>__ROOT__</p><!--/tp/public-->
+<p>{$Think.server.HTTP_HOST}</p>
+<p>{$Think.session.name}</p>
+<p>{$Think.get.id}</p>
+<p>{$Think.request.id}</p>
+<p>{$Think.post.id}</p>
+<p>{$Think.const.APP_PATH}</p>
+<p>{$email}:{$email|md5}</p>
+{/*this is zhushi*/}
+<!--
+{literal}
+{$email}
+{/literal}
+-->
+{volist name="list" id="vo"}
+<p>{$vo.name}</p>
+{/volist}
